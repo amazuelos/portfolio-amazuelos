@@ -1,0 +1,61 @@
+---
+import Button from "../components/button.astro";
+import Separator from "../components/home/separator.astro";
+import Skills from "../components/home/skills.astro";
+import Layout from "../layouts/main.astro";
+---
+
+<Layout title="Toni">
+  <div
+    class="relative z-20 w-full max-w-4xl mx-auto mt-16 px-7 md:mt-24 lg:mt-32 xl:px-0"
+  >
+    <div class="flex flex-col items-center md:flex-row">
+      <div class="relative w-full md:w-1/2">
+        <h1
+          class="mb-5 text-4xl font-bold leading-tight md:text-4xl lg:text-6xl dark:text-white"
+        >
+          Hello, I'm Toni Mazuelos.
+        </h1>
+        <p class="mb-6 text-base text-neutral-600 dark:text-neutral-400">
+          I'm a software engineer based in Barcelona, Spain. I love building Websites and Web Applications.
+        </p>
+        <p class="mb-2 font-semibold text-neutral-800 dark:text-neutral-200">
+          I can help you out with:
+        </p>
+        <ul
+          class="py-2 space-y-[3px] text-sm list-disc list-inside text-neutral-500 dark:text-neutral-400"
+        >
+          <li>Vue.js</li>
+          <li>Nuxt</li>
+          <li>Typescript</li>
+          <li>E2E & Unit Testing</li>
+        </ul>
+        <Button text="Contact me on LinkedIn" link="https://www.linkedin.com/in/antonio-mazuelos-alvarez-0bb24155/" />
+      </div>
+      <div
+        class="relative hidden w-full md:flex md:pl-10 md:w-1/2"
+      >
+        <div class="relative z-50 w-full">
+          <div class="relative z-30">
+            <img
+              src="/assets/images/photo.png"
+              loading="eager"
+              decoding="auto"
+              class="relative rounded-lg z-30 w-full md:max-w-md mx-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Separator text="Check out my skills" />
+  <Skills />
+  <Separator text="download my CV" />
+  <section class="flex flex-col items-center w-full max-w-sm tablet:max-w-3xl mx-auto text-center">
+    <p class="mb-5 text-md font-bold leading-tight dark:text-white">
+      I'm open to work right now, so download my CV and let's talk!
+    </p>
+    <Button class="relative w-full max-w-4xl mx-auto" text="Donwload my CV and let's talk!" />
+  </section>
+  <Separator text="" />
+</Layout>

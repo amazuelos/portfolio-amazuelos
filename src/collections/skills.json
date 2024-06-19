@@ -1,0 +1,29 @@
+[
+	{
+		"name": "Vue"
+	},
+	{
+		"name": "Nuxt"
+	},
+	{
+		"name": "Typescript"
+	},
+	{
+		"name": "E2E Testing"
+	},
+	{
+		"name": "Unit Testing"
+	},
+	{
+		"name": "DDD"
+	},
+	{
+		"name": "HTML5"
+	},
+	{
+		"name": "CSS3"
+	},
+	{
+		"name" : "Tailwind"
+	}
+]
