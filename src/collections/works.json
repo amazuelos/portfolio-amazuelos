@@ -1,0 +1,17 @@
+[
+  {
+    "company": "ErikaLust",
+    "work": "FrontEnd Developer",
+    "description": "Extensive experience in application development using Javascript technologies, with a special focus on VUE/NUXT, TypeScript.  Outstanding proficiency in layout with HTML5/CSS3 and Tailwind in addition to experience in test implementation using Cypress and Jest"
+  },
+  {
+    "company": "BeRepublic",
+    "work": "Fullstack Developer",
+    "description": "Outstanding experience in the development and maintenance of web applications using PHP in the Symfony framework. MySQL database development and design. Extensive expertise in version control and implementation of continuous integration systems, using tools such as Jenkins and Docker. Layout with CSS/SASS and JQuery and native javascript."
+  },
+  {
+    "company": "Ascidea",
+    "work": "Fullstack Developer",
+    "description": "Web developer with experience in layout (HTML/CSS with Bootstrap) and internal application development in PHP with non-SQL databases. Proficient in Bash scripting and dynamic function development with Javascript/jQuery for form validation and animations. Focused on efficient project delivery and adaptation to new technologies."
+  }
+]
