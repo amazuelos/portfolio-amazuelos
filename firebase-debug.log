@@ -1,0 +1,64 @@
+[debug] [2024-06-19T18:12:08.197Z] ----------------------------------------------------------------------
+[debug] [2024-06-19T18:12:08.198Z] Command:       /Users/toni/.nvm/versions/node/v18.17.1/bin/node /Users/toni/.nvm/versions/node/v18.17.1/bin/firebase deploy
+[debug] [2024-06-19T18:12:08.198Z] CLI Version:   13.11.2
+[debug] [2024-06-19T18:12:08.198Z] Platform:      darwin
+[debug] [2024-06-19T18:12:08.198Z] Node Version:  v18.17.1
+[debug] [2024-06-19T18:12:08.199Z] Time:          Wed Jun 19 2024 20:12:08 GMT+0200 (hora de verano de Europa central)
+[debug] [2024-06-19T18:12:08.199Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-19T18:12:08.230Z] Field ".hosting.rewrites" in "firebase.json" is possibly invalid: should be array
+[debug] [2024-06-19T18:12:08.230Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2024-06-19T18:12:08.230Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2024-06-19T18:12:08.231Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-19T18:12:08.232Z] > authorizing via signed-in user (amazuelos92@gmail.com)
+[debug] [2024-06-19T18:12:08.232Z] [iam] checking project portfolio-antonio-mazuelos for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-06-19T18:12:08.233Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-antonio-mazuelos:testIamPermissions [none]
+[debug] [2024-06-19T18:12:08.233Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-antonio-mazuelos:testIamPermissions x-goog-quota-user=projects/portfolio-antonio-mazuelos
+[debug] [2024-06-19T18:12:08.233Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-antonio-mazuelos:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-19T18:12:08.930Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-antonio-mazuelos:testIamPermissions 200
+[debug] [2024-06-19T18:12:08.931Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-antonio-mazuelos:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-19T18:12:08.933Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-antonio-mazuelos [none]
+[debug] [2024-06-19T18:12:09.284Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-antonio-mazuelos 200
+[debug] [2024-06-19T18:12:09.284Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-antonio-mazuelos {"projectId":"portfolio-antonio-mazuelos","projectNumber":"454356878987","displayName":"Portfolio Antonio Mazuelos","name":"projects/portfolio-antonio-mazuelos","resources":{"hostingSite":"portfolio-antonio-mazuelos","storageBucket":"portfolio-antonio-mazuelos.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_b33c9f36-534b-4f1c-b9bd-ae463a8499eb"}
+[debug] [2024-06-19T18:12:09.288Z] TypeError: _a.map is not a function
+    at normalize (/Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/hosting/config.js:155:90)
+    at Object.hostingConfig (/Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/hosting/config.js:182:9)
+    at hasPinnedFunctions (/Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/deploy/hosting/prepare.js:25:28)
+    at deploy (/Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/deploy/index.js:60:77)
+    at Command.actionFn (/Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/commands/deploy.js:126:32)
+    at /Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/command.js:228:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-06-19T18:12:18.259Z] ----------------------------------------------------------------------
+[debug] [2024-06-19T18:12:18.260Z] Command:       /Users/toni/.nvm/versions/node/v18.17.1/bin/node /Users/toni/.nvm/versions/node/v18.17.1/bin/firebase deploy
+[debug] [2024-06-19T18:12:18.260Z] CLI Version:   13.11.2
+[debug] [2024-06-19T18:12:18.260Z] Platform:      darwin
+[debug] [2024-06-19T18:12:18.261Z] Node Version:  v18.17.1
+[debug] [2024-06-19T18:12:18.261Z] Time:          Wed Jun 19 2024 20:12:18 GMT+0200 (hora de verano de Europa central)
+[debug] [2024-06-19T18:12:18.261Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-19T18:12:18.291Z] Field ".hosting.rewrites" in "firebase.json" is possibly invalid: should be array
+[debug] [2024-06-19T18:12:18.291Z] Field ".hosting" in "firebase.json" is possibly invalid: should be array
+[debug] [2024-06-19T18:12:18.291Z] Field ".hosting" in "firebase.json" is possibly invalid: should match some schema in anyOf
+[debug] [2024-06-19T18:12:18.293Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-19T18:12:18.293Z] > authorizing via signed-in user (amazuelos92@gmail.com)
+[debug] [2024-06-19T18:12:18.293Z] [iam] checking project portfolio-antonio-mazuelos for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-06-19T18:12:18.294Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-antonio-mazuelos:testIamPermissions [none]
+[debug] [2024-06-19T18:12:18.294Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-antonio-mazuelos:testIamPermissions x-goog-quota-user=projects/portfolio-antonio-mazuelos
+[debug] [2024-06-19T18:12:18.294Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-antonio-mazuelos:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-19T18:12:19.020Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-antonio-mazuelos:testIamPermissions 200
+[debug] [2024-06-19T18:12:19.021Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-antonio-mazuelos:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-19T18:12:19.022Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-antonio-mazuelos [none]
+[debug] [2024-06-19T18:12:19.321Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-antonio-mazuelos 200
+[debug] [2024-06-19T18:12:19.321Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-antonio-mazuelos {"projectId":"portfolio-antonio-mazuelos","projectNumber":"454356878987","displayName":"Portfolio Antonio Mazuelos","name":"projects/portfolio-antonio-mazuelos","resources":{"hostingSite":"portfolio-antonio-mazuelos","storageBucket":"portfolio-antonio-mazuelos.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_b33c9f36-534b-4f1c-b9bd-ae463a8499eb"}
+[debug] [2024-06-19T18:12:19.324Z] TypeError: _a.map is not a function
+    at normalize (/Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/hosting/config.js:155:90)
+    at Object.hostingConfig (/Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/hosting/config.js:182:9)
+    at hasPinnedFunctions (/Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/deploy/hosting/prepare.js:25:28)
+    at deploy (/Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/deploy/index.js:60:77)
+    at Command.actionFn (/Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/commands/deploy.js:126:32)
+    at /Users/toni/.nvm/versions/node/v18.17.1/lib/node_modules/firebase-tools/lib/command.js:228:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.
