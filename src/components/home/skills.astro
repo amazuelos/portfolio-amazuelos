@@ -8,8 +8,7 @@ import skills from "../../collections/skills.json";
   {
     skills.map((skill) => {
       return (
-      <button 
-        type="button" 
+      <div  
         class="
           text-gray-900
           bg-white border 
@@ -32,9 +31,10 @@ import skills from "../../collections/skills.json";
           max-w-md  
           w-full
           mx-auto
+          text-center
         ">
         { skill.name }
-      </button>
+      </div>
       )
     })
   } 
