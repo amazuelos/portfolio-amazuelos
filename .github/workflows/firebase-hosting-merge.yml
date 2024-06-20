@@ -17,3 +17,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANTONIO_MAZUELOS }}
           channelId: live
           projectId: portfolio-antonio-mazuelos
+      - run: npx build astro
