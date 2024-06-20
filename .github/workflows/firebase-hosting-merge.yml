@@ -23,9 +23,10 @@ jobs:
       - name: Build Astro project
         run: npm run build  # Ajusta según el comando específico para construir tu proyecto de Astro
 
-      - name: Deploy to Firebase Hosting
-        env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANTONIO_MAZUELOS }}
-        run: |
-          firebase deploy --only hosting -m "GitHub Actions build $GITHUB_RUN_NUMBER"
+      - uses: actions/checkout@v4
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANTONIO_MAZUELOS }}
+          channelId: live
+          projectId: portfolio-antonio-mazuelos
