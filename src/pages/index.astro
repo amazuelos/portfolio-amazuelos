@@ -50,7 +50,7 @@ import works from "../collections/works.json";
     </div>
   </div>
   <Separator text="WORK EXPERIENCE" />
-  <section>
+  <section class="mx-2 tablet:mx-0">
     <div class="max-w-sm tablet:max-w-3xl mx-auto">
       {
         works.map((work) => {
@@ -66,7 +66,9 @@ import works from "../collections/works.json";
     </div>
   </section>
   <Separator text="Check out my skills" />
-  <Skills />
+  <section class="mx-2 tablet:mx-0">
+    <Skills />
+  </section>
   <Separator text="download my CV" />
   <section class="flex flex-col items-center w-full max-w-sm tablet:max-w-3xl mx-auto text-center">
     <p class="mb-5 text-md font-bold leading-tight dark:text-white">
