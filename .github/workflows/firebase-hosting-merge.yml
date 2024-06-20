@@ -30,9 +30,10 @@ jobs:
         run: |
           ls -l dist  # Verifica si la carpeta 'dist' existe y muestra su contenido si es posible
           ls -l  # Muestra el contenido del directorio actual para ver qué se ha generado
+      - name: checkout
+        uses: actions/checkout@v4
       - name: Deploy to Firebase Hosting
-      - uses: actions/checkout@v4
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+        uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANTONIO_MAZUELOS }}
