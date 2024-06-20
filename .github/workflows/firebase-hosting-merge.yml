@@ -32,7 +32,9 @@ jobs:
           ls -l  # Muestra el contenido del directorio actual para ver qué se ha generado
 
       - name: Move Astro build to public folder
-        run: mv dist public  # Mueve la carpeta 'dist' generada por Astro a 'public'
+        run: |
+          rm -rf public  # Eliminar 'public' existente si es necesario
+          cp -r dist public  # Mueve la carpeta 'dist' generada por Astro a 'public'
         
       - name: checkout
         uses: actions/checkout@v4
