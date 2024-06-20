@@ -32,7 +32,9 @@ jobs:
           ls -l  # Muestra el contenido del directorio actual para ver qué se ha generado
       - name: Deploy to Firebase Hosting
         env:
-          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
-          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANTONIO_MAZUELOS }}
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANTONIO_MAZUELOS }}
+          channelId: live
+          projectId: portfolio-antonio-mazuelos
         run: |
           firebase deploy --only hosting -m "GitHub Actions build $GITHUB_RUN_NUMBER"
