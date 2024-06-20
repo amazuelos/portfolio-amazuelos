@@ -2,7 +2,7 @@
 
 # Compilar el proyecto Astro
 echo "Compilando proyecto Astro..."
-astro build
+yarn build
 
 # Copiar archivos de 'dist' a 'public' (sobrescribiendo existentes)
 echo "Copiando archivos de 'dist' a 'public'..."

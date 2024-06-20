@@ -18,13 +18,13 @@
 		"name": "DDD"
 	},
 	{
+		"name" : "Tailwind"
+	},
+	{
 		"name": "HTML5"
 	},
 	{
 		"name": "CSS3"
-	},
-	{
-		"name" : "Tailwind"
 	},
 	{
 		"name" : "GTM"
