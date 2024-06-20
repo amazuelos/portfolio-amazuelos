@@ -16,7 +16,10 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '22'  # Asegúrate de usar una versión compatible con Astro
-
+          
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+        
       - name: Install dependencies
         run: npm install
 
