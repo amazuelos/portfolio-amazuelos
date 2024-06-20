@@ -15,14 +15,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '22'  # Actualiza a una versión de Node.js compatible con Astro
-          cache: 'yarn'  # Opcional: habilita el caching de Yarn para acelerar la instalación
+          node-version: '22'  # Asegúrate de usar una versión compatible con Astro
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Build Astro project
-        run: yarn build  # Ajusta según el comando específico para construir tu proyecto de Astro
+        run: npm run build  # Ajusta según el comando específico para construir tu proyecto de Astro
 
       - name: Deploy to Firebase Hosting
         env:
