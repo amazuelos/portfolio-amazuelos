@@ -9,13 +9,13 @@
 		"name": "Typescript"
 	},
 	{
+		"name": "DDD"
+	},
+	{
 		"name": "E2E Testing"
 	},
 	{
 		"name": "Unit Testing"
-	},
-	{
-		"name": "DDD"
 	},
 	{
 		"name": "HTML5"
