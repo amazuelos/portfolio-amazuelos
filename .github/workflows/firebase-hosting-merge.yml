@@ -23,6 +23,13 @@ jobs:
       - name: Build Astro project
         run: npm run build  # Ajusta según el comando específico para construir tu proyecto de Astro
 
+      - name: Commit built files
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add dist
+          git commit -m 'Build: Update dist folder with new build'
+          
       - name: checkout
         uses: actions/checkout@v4
       - name: Deploy to Firebase Hosting
@@ -32,4 +39,3 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANTONIO_MAZUELOS }}
           channelId: live
           projectId: portfolio-antonio-mazuelos
-          
