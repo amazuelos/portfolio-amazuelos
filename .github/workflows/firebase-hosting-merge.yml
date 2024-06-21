@@ -23,22 +23,6 @@ jobs:
       - name: Build Astro project
         run: npm run build  # Ajusta según el comando específico para construir tu proyecto de Astro
 
-      - name: Prepare deployment directory
-        run: |
-          rm -rf ./public/build/*  # Limpia el contenido anterior si es necesario
-          mkdir -p ./public/build  # Crea la carpeta 'deploy' dentro de 'public'
-          cp -r ./dist/* public/build  # Copia el contenido de 'dist' a 'public/build'
-
-      - name: Debug "public/build" output
-        run: |
-          ls -l public/build  # Verifica si la carpeta 'public/build' existe y muestra su contenido si es posible
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public/build
-          
       - name: checkout
         uses: actions/checkout@v4
       - name: Deploy to Firebase Hosting
