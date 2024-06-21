@@ -29,10 +29,9 @@ jobs:
           mkdir -p ./public/build  # Crea la carpeta 'deploy' dentro de 'public'
           cp -r ./dist/* public/build  # Copia el contenido de 'dist' a 'public/build'
 
-      - name: Debug build output
+      - name: Debug "public/build" output
         run: |
-          ls -l public/build  # Verifica si la carpeta 'dist' existe y muestra su contenido si es posible
-          ls -l  # Muestra el contenido del directorio actual para ver qué se ha generado
+          ls -l public/build  # Verifica si la carpeta 'public/build' existe y muestra su contenido si es posible
           
       - name: checkout
         uses: actions/checkout@v4
