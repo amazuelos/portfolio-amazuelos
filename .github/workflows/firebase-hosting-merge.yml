@@ -33,7 +33,7 @@ jobs:
         run: |
           ls -l public/build  # Verifica si la carpeta 'public/build' existe y muestra su contenido si es posible
 
-    - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
