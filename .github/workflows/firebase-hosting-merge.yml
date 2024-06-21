@@ -32,6 +32,15 @@ jobs:
       - name: Debug "public/build" output
         run: |
           ls -l public/build  # Verifica si la carpeta 'public/build' existe y muestra su contenido si es posible
+      - name: Deploy to GitHub Pages
+        run: |
+          git config --global user.email "amazuelos92@gmail.com"
+          git config --global user.name "amazuelos92"
+          git add public/build
+          git commit -m "Deploy to GitHub Pages"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: checkout
         uses: actions/checkout@v4
