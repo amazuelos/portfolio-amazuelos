@@ -6,6 +6,9 @@
 		"name": "Nuxt"
 	},
 	{
+		"name" : "Astro"
+	},
+	{
 		"name": "Typescript"
 	},
 	{
@@ -31,8 +34,5 @@
 	},
 	{
 		"name" : "Firebase"
-	},
-	{
-		"name" : "Astro"
 	}
 ]
