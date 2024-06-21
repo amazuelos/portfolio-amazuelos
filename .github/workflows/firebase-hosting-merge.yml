@@ -30,6 +30,12 @@ jobs:
           git add dist
           git commit -m 'Build: Update dist folder with new build'
           
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+
       - name: checkout
         uses: actions/checkout@v4
       - name: Deploy to Firebase Hosting
