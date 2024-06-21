@@ -26,9 +26,15 @@ jobs:
       - name: Build Astro project
         run: npm run build  # Ajusta según el comando específico para construir tu proyecto de Astro
 
+      - name: Prepare deployment directory
+      run: |
+        mkdir -p public/build  # Crea la carpeta 'deploy' dentro de 'public'
+        rm -rf public/build/*  # Limpia el contenido anterior si es necesario
+        cp -r dist/* public/build  # Copia el contenido de 'dist' a 'public/build'
+
       - name: Debug build output
         run: |
-          ls -l dist  # Verifica si la carpeta 'dist' existe y muestra su contenido si es posible
+          ls -l public/deploy  # Verifica si la carpeta 'dist' existe y muestra su contenido si es posible
           ls -l  # Muestra el contenido del directorio actual para ver qué se ha generado
           
       - name: checkout
