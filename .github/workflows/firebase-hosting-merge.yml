@@ -20,9 +20,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install Firebase Tools
-        run: npm install -g firebase-tools
-
       - name: Build Astro project
         run: npm run build  # Ajusta según el comando específico para construir tu proyecto de Astro
 
@@ -52,5 +49,12 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: master
 
+      - name: checkout
+        uses: actions/checkout@v4
       - name: Deploy to Firebase Hosting
-        run: firebase deploy --token ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANTONIO_MAZUELOS }}
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_ANTONIO_MAZUELOS }}
+          channelId: live
+          projectId: portfolio-antonio-mazuelos
