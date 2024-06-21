@@ -26,13 +26,25 @@ jobs:
       - name: Build Astro project
         run: npm run build  # Ajusta según el comando específico para construir tu proyecto de Astro
 
-      - name: Commit built files
+      - name: Check if there are changes in dist folder
+        id: check_changes
         run: |
-          git diff --quiet || (echo "There are uncommitted changes in dist folder."; exit 1)
+          if git diff --quiet; then
+            echo "No changes in dist folder."
+            echo "::set-output name=changes::false"
+          else
+            echo "Changes detected in dist folder."
+            echo "::set-output name=changes::true"
+          fi
+
+      - name: Commit and push changes if any
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add dist
-          git commit -m 'Build: Update dist folder with new build'
+          git commit -m 'Build: Update dist folder'
+          git push origin master
 
       - name: Push changes
         uses: ad-m/github-push-action@v0.6.0
