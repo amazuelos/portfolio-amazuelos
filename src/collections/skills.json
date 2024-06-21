@@ -9,6 +9,9 @@
 		"name" : "Astro"
 	},
 	{
+		"name" : "Tailwind"
+	},
+	{
 		"name": "Typescript"
 	},
 	{
@@ -25,9 +28,6 @@
 	},
 	{
 		"name": "CSS3"
-	},
-	{
-		"name" : "Tailwind"
 	},
 	{
 		"name" : "GTM"
