@@ -25,9 +25,9 @@ jobs:
 
       - name: Prepare deployment directory
         run: |
-          mkdir -p public/build  # Crea la carpeta 'deploy' dentro de 'public'
-          rm -rf public/build/*  # Limpia el contenido anterior si es necesario
-          cp -r dist/* public/build  # Copia el contenido de 'dist' a 'public/build'
+          rm -rf ./public/build/*  # Limpia el contenido anterior si es necesario
+          mkdir -p ./public/build  # Crea la carpeta 'deploy' dentro de 'public'
+          cp -r ./dist/* public/build  # Copia el contenido de 'dist' a 'public/build'
 
       - name: Debug build output
         run: |
